@@ -838,4 +838,7 @@
   <!-- LineageOS -->
   <include name="snippets/lineage.xml" />
 
+    <!-- Vince -->
+  <include name="snippets/vince.xml" />
+
 </manifest>

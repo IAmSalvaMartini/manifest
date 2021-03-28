@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="gh"
+          fetch="https://github.com/IAmSalvaMartini"
+          revision="elle" />
+    
+  <remote name="suan"
+          fetch="https://github.com/blacksuan19"
+          revision="darky" />
+    
+  <remote name="gcc" 
+          fetch="https://github.com/mvaisakh"
+          revision="lld-integration" />
+ 
+  <!-- Device Specific trees -->
+  <project path="device/xiaomi/vince" name="device_xiaomi_vince" remote="gh" />
+  <project path="kernel/xiaomi/vince" name="kernel_dark_ages_vince" remote="suan" />
+  <project path="vendor/xiaomi/vince" name="android_vendor_xiaomi_vince" remote="gh" />
+
+<!-- Custom GCC toolchain -->
+  <project path="prebuilts/gcc/host/linux-x86/eva-gcc" name="gcc-arm64" remote="gcc" />
+</manifest>
