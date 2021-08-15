@@ -27,7 +27,7 @@ $ . build/envsetup.sh
 $ lunch evolution_$device-userdebug
 
 # Build the code
-$ mka bacon -jX
+$ mka evolution
 ```
 
 # Credits:
@@ -59,3 +59,5 @@ $ mka bacon -jX
  * [**Havoc-OS**](https://github.com/Havoc-OS)
  * [**Xtended**](https://github.com/Project-Xtended)
  * [**ColtOS**](https://github.com/Colt-Enigma)
+ * [**DerpFest**](https://derpfest.org)
+ * [**exTHmUI**](https://github.com/exTHmUI)

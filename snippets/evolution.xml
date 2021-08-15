@@ -4,6 +4,9 @@
   <remote  name="github"
            fetch="https://github.com" />
 
+  <remote  name="gitlab"
+           fetch="https://gitlab.com" />
+
   <remote  name="evo"
            fetch="https://github.com/Evolution-X"
            revision="refs/heads/elle" />
@@ -87,26 +90,26 @@
   <remove-project name="platform/hardware/qcom/sm8150/display" />
   <remove-project name="platform/hardware/qcom/sm8150/media" />
   <remove-project name="platform/hardware/ril" />
+  <remove-project name="platform/libcore" />
   <remove-project name="platform/packages/apps/Bluetooth" />
   <remove-project name="platform/packages/apps/Nfc" />
   <remove-project name="platform/packages/apps/PackageInstaller" />
   <remove-project name="platform/packages/apps/Settings" />
   <remove-project name="platform/packages/apps/SettingsIntelligence" />
   <remove-project name="platform/packages/apps/Stk" />
-  <remove-project name="platform/packages/apps/ThemePicker" />
+  <remove-project name="platform/packages/apps/WallpaperPicker2" />
   <remove-project name="platform/packages/providers/DownloadProvider" />
   <remove-project name="platform/packages/providers/MediaProvider" />
   <remove-project name="platform/packages/providers/TelephonyProvider" />
   <remove-project name="platform/packages/services/Telecomm" />
   <remove-project name="platform/packages/services/Telephony" />
-  <remove-project name="platform/platform_testing" />
   <remove-project name="platform/prebuilts/abi-dumps/vndk" />
   <remove-project name="platform/prebuilts/build-tools" />
   <remove-project name="platform/system/bt" />
   <remove-project name="platform/system/core" />
   <remove-project name="platform/system/incremental_delivery" />
-  <remove-project name="platform/system/iorap" />
   <remove-project name="platform/system/libufdt" />
+  <remove-project name="platform/system/media" />
   <remove-project name="platform/system/netd" />
   <remove-project name="platform/system/security" />
   <remove-project name="platform/system/sepolicy" />
@@ -124,6 +127,7 @@
   <remove-project name="platform/external/selinux" />
   <remove-project name="platform/external/tinyalsa" />
   <remove-project name="platform/external/tinycompress" />
+  <remove-project name="platform/external/wpa_supplicant_8" />
   <remove-project name="platform/tools/metalava" />
   <remove-project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" />
   <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" />
@@ -140,7 +144,6 @@
   <project path="external/guice" name="external_guice" remote="evo" />
   <project path="external/libcxx" name="external_libcxx" remote="evo" />
   <project path="external/lottie" name="external_lottie" remote="evo" />
-  <project path="external/pulse" name="external_pulse" remote="evo" />
   <project path="external/selinux" name="external_selinux" remote="evo" />
   <project path="external/tinycompress" name="external_tinycompress" remote="evo" />
 
@@ -170,8 +173,8 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
+  <project path="libcore" name="libcore" remote="evo" />
   <project path="manifest" name="manifest" remote="evo" />
-  <project path="platform_testing" name="platform_testing" remote="evo" />
   <project path="vendor/evolution" name="vendor_evolution" remote="evo" />
   <project path="vendor/gms" name="vendor_gapps" groups="vendor" clone-depth="1" remote="evo-gitlab" />
   <project path="vendor/pixelstyle" name="vendor_pixelstyle" remote="evo" />
@@ -199,9 +202,9 @@
   <project path="packages/apps/SimpleDeviceConfig" name="packages_apps_SimpleDeviceConfig" remote="evo" />
   <project path="packages/apps/Snap" name="packages_apps_Snap" remote="evo" />
   <project path="packages/apps/Stk" name="packages_apps_Stk" remote="evo" />
-  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="evo" />
   <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="evo" />
   <project path="packages/apps/Updates" name="packages_apps_Updates" remote="evo" />
+  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="evo" />
 
   <!-- Prebuilt repos -->
   <project path="prebuilts/abi-dumps/vndk" name="prebuilts_abi-dumps_vndk" clone-depth="1" remote="evo" />
@@ -212,6 +215,9 @@
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="evo" />
   <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" remote="evo" />
 
+  <!-- Resources repos -->
+  <project path="packages/resources/devicesettings-custom" name="packages_resources_devicesettings-custom" remote="evo" />
+
   <!-- Services repos -->
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="evo" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="evo" />
@@ -220,7 +226,6 @@
   <project path="system/bt" name="system_bt" remote="evo" />
   <project path="system/core" name="system_core" remote="evo" />
   <project path="system/incremental_delivery" name="system_incremental_delivery" remote="evo" />
-  <project path="system/iorap" name="system_iorap" remote="evo" />
   <project path="system/netd" name="system_netd" remote="evo" />
   <project path="system/security" name="system_security" remote="evo" />
   <project path="system/sepolicy" name="system_sepolicy" remote="evo" />
